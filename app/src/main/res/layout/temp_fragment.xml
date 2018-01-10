@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ubidots.bo.ubidotsapplication.TempFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/currentTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temp"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ff0000"
+        android:layout_alignBaseline="@+id/displayTemp"
+        android:layout_alignBottom="@+id/displayTemp"
+        android:layout_toEndOf="@+id/displayTemp"
+        android:layout_marginStart="21dp" />
+
+    <TextView
+        android:id="@+id/displayMeanTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mean Temperature Value:"
+        android:layout_below="@+id/displayTemp"
+        android:layout_alignStart="@+id/displayTemp"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ff0000"
+        android:text="Temperature Line Chart - Smart Plant System"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp" />
+
+    <TextView
+        android:id="@+id/meanTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mean"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ff0000"
+        android:layout_alignBaseline="@+id/displayMeanTemp"
+        android:layout_alignBottom="@+id/displayMeanTemp"
+        android:layout_alignStart="@+id/currentTemp" />
+
+    <TextView
+        android:id="@+id/displayTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Temperature Value:"
+        android:layout_below="@+id/chartTemp"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="26dp" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chartTemp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_height="300dp"
+        android:layout_weight="1" />
+
+</RelativeLayout>

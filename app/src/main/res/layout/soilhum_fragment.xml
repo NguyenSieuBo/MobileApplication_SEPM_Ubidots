@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ubidots.bo.ubidotsapplication.TempFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/displaySoilHum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current SoilHum Value:"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/chartSoilHum"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/currentSoilHum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SoilHum"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ff0000"
+        android:layout_alignBaseline="@+id/displaySoilHum"
+        android:layout_alignBottom="@+id/displaySoilHum"
+        android:layout_alignStart="@+id/meanSoilHum" />
+
+    <TextView
+        android:id="@+id/displayMeanSoilHum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mean SoilHum Value:"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/displaySoilHum"
+        android:layout_alignStart="@+id/displaySoilHum" />
+
+    <TextView
+        android:id="@+id/meanSoilHum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mean"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ff0000"
+        android:layout_alignBaseline="@+id/displayMeanSoilHum"
+        android:layout_alignBottom="@+id/displayMeanSoilHum"
+        android:layout_toEndOf="@+id/displaySoilHum"
+        android:layout_marginStart="57dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ff0000"
+        android:text="Soil Humidity Bar Chart - Smart Plant System"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chartSoilHum"
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_height="300dp"
+        android:layout_weight="1" />
+
+</RelativeLayout>

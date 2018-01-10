@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ubidots.bo.ubidotsapplication.HumFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/displayHum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView1"
+        android:layout_below="@+id/chartHum"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="11dp"
+        android:text="Current Humidity Value:" />
+
+    <TextView
+        android:id="@+id/currentHum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hum"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ff0000"
+        android:layout_marginStart="51dp"
+        android:layout_alignBottom="@+id/displayHum"
+        android:layout_toEndOf="@+id/displayHum" />
+
+    <TextView
+        android:id="@+id/displayMeanHum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/displayHum"
+        android:layout_below="@+id/displayHum"
+        android:layout_marginTop="16dp"
+        android:text="Mean Humidity Value:" />
+
+    <TextView
+        android:id="@+id/meanHum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mean"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ff0000"
+        android:layout_alignBaseline="@+id/displayMeanHum"
+        android:layout_alignBottom="@+id/displayMeanHum"
+        android:layout_alignStart="@+id/currentHum" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ff0000"
+        android:text="Humidity Bar Chart - Smart Plant System"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chartHum"
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_height="300dp"
+        android:layout_weight="1" />
+
+</RelativeLayout>
